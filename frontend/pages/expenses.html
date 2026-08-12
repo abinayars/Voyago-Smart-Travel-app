@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Expenses - Voyago</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="expenses-page">
+
+<header class="expenses-header">
+
+<div>
+
+<h1>Expense Tracker 💰</h1>
+
+<p>Track every rupee spent during your journey.</p>
+
+</div>
+
+<button class="add-expense-btn" onclick="openExpenseModal()">
+    <i class="fa-solid fa-plus"></i>
+    Add Expense
+</button>
+</header>
+
+<section class="expense-summary">
+
+<div class="expense-card">
+
+<i class="fa-solid fa-wallet"></i>
+
+<h3>Total Budget</h3>
+
+<p id="totalBudget">₹0</p>
+
+</div>
+
+<div class="expense-card">
+
+<i class="fa-solid fa-money-bill-wave"></i>
+
+<h3>Spent</h3>
+
+<p id="spentAmount">₹0</p>
+
+</div>
+
+<div class="expense-card">
+
+<i class="fa-solid fa-piggy-bank"></i>
+
+<h3>Remaining</h3>
+
+<p id="remainingAmount">₹0</p>
+
+</div>
+
+<div class="expense-card">
+
+<i class="fa-solid fa-chart-pie"></i>
+
+<h3>Savings</h3>
+
+<p id="savingPercent">0%</p>
+
+</div>
+
+</section>
+<section class="expense-table-section">
+
+    <h2>Recent Expenses</h2>
+
+    <table class="expense-table">
+        <thead>
+
+        <tr>
+    <th>Category</th>
+    <th>Description</th>
+    <th>Date</th>
+    <th>Amount</th>
+    <th>Actions</th>
+</tr>
+       
+    </thead>
+<tbody id="expenseTableBody">
+
+</tbody>
+       
+        
+
+    </table>
+
+<section class="budget-progress">
+
+<h2>Budget Usage</h2>
+
+<div class="progress-bar-bg">
+
+<div
+    class="progress-bar-fill"
+    id="budgetProgress">
+
+0%
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+<div id="expenseModal" class="modal">
+
+<div class="modal-content">
+
+<h2>Add Expense</h2>
+
+<input
+type="text"
+id="expenseCategory"
+placeholder="Category">
+
+<input
+type="text"
+id="expenseDescription"
+placeholder="Description">
+
+<input
+type="number"
+id="expenseAmount"
+placeholder="Amount">
+
+<button id="saveExpenseBtn">
+
+Save Expense
+
+</button>
+
+</div>
+
+</div>
+<script src="../js/script.js"></script>
+<script src="../js/expenses.js"></script>
+</body>
+
+</html>

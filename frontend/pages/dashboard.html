@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Voyago Dashboard</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+
+        <h2 class="logo">Voyago</h2>
+
+    <ul>
+
+    <li class="active" onclick="window.location.href='dashboard.html'">
+        <i class="fa-solid fa-house"></i>
+        Dashboard
+    </li>
+
+    <li onclick="window.location.href='trips.html'">
+        <i class="fa-solid fa-plane"></i>
+        My Trips
+    </li>
+
+    <li onclick="window.location.href='planner.html'">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <a href="planner.html">Planner</a>
+    </li>
+
+    <li onclick="window.location.href='expenses.html'">
+        <i class="fa-solid fa-wallet"></i>
+        <a href="expenses.html">Expenses</a>
+     </li>
+
+    <li onclick="window.location.href='wishlist.html'">
+        <i class="fa-solid fa-heart"></i>
+        <a href="wishlist.html">Wishlist</a>
+    </li>
+
+    <li onclick="window.location.href='profile.html'">
+        <i class="fa-solid fa-user"></i>
+         <a href="profile.html">Profile</a>
+    </li>
+
+</ul>
+
+
+
+
+    </aside>
+
+    <main class="dashboard-content">
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <h1>Good Morning, Abinaya 👋</h1>
+
+                <p>Your next adventure awaits.</p>
+
+            </div>
+
+        
+   <div class="profile" id="profileBtn">
+
+    <div class="notification">
+
+        <i class="fa-regular fa-bell" id="bellBtn"></i>
+
+        <div class="notification-box" id="notificationBox">
+
+            <h3>Notifications</h3>
+
+            <div class="notification-item">
+                ✈ Flight to Tokyo confirmed
+                <span>2 mins ago</span>
+            </div>
+
+            <div class="notification-item">
+                💰 Expense added
+                <span>1 hour ago</span>
+            </div>
+
+            <div class="notification-item">
+                ❤️ Bali added to Wishlist
+                <span>Yesterday</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <i class="fa-regular fa-circle-user"></i>
+
+    <div class="profile-dropdown" id="profileDropdown">
+
+        <h3>👤 Abinaya</h3>
+
+        <hr>
+
+        <a href="profile.html">
+            <i class="fa-solid fa-user"></i>
+            My Profile
+        </a>
+
+        <a href="#">
+            <i class="fa-solid fa-gear"></i>
+            Settings
+        </a>
+
+        <a href="login.html">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </a>
+
+    </div>
+
+</div>
+
+        </header>
+        <section class="search-section">
+
+    <div class="search-box">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search destinations, trips or countries...">
+
+    </div>
+
+</section>
+      <section class="stats">
+
+    <div class="stat-card">
+        <h2 id="totalTrips">0</h2>
+        <p>Total Trips</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 id="totalBudget">₹0</h2>
+        <p>Total Budget</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 id="completedTrips">0</h2>
+        <p>Completed Trips</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 id="upcomingTrips">0</h2>
+        <p>Upcoming Trips</p>
+    </div>
+
+</section>
+<section class="upcoming-trip">
+
+    <div class="trip-card">
+
+        <div class="trip-left">
+
+            <h2>✈️ Upcoming Trip</h2>
+
+            <h3 id="upcomingDestination">No Trips</h3>
+
+            <p id="upcomingDate">--</p>
+
+            <p id="upcomingBudget">₹0</p>
+
+        </div>
+
+        <button class="trip-btn"
+                onclick="window.location.href='trips.html'">
+            View Details
+        </button>
+
+    </div>
+
+</section>
+<section class="destinations">
+
+    <h2>🌍 Popular Destinations</h2>
+
+    <div class="destination-grid">
+
+        <div class="destination-card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600" alt="Bali">
+            <h3>Bali</h3>
+            <p>Indonesia</p>
+        </div>
+
+        <div class="destination-card">
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600" alt="Paris">
+            <h3>Paris</h3>
+            <p>France</p>
+        </div>
+
+        <div class="destination-card">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=600" alt="Swiss Alps">
+            <h3>Swiss Alps</h3>
+            <p>Switzerland</p>
+        </div>
+
+    </div>
+
+</section>
+<section class="analytics">
+
+    <h2>📊 Expense Analytics</h2>
+
+    <div class="analytics-card">
+
+        <div class="progress-item">
+            <span>Flights- ₹18,000</span>
+            <div class="progress">
+                <div class="progress-bar flight"></div>
+            </div>
+        </div>
+
+        <div class="progress-item">
+            <span>Hotels - ₹15,000</span>
+            <div class="progress">
+                <div class="progress-bar hotel"></div>
+            </div>
+        </div>
+
+        <div class="progress-item">
+            <span>Food - ₹8,000</span>
+            <div class="progress">
+                <div class="progress-bar food"></div>
+            </div>
+        </div>
+
+        <div class="progress-item">
+            <span>Shopping - ₹5,000</span>
+            <div class="progress">
+                <div class="progress-bar shopping"></div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<section class="activity">
+
+    <h2>🕒 Recent Activity</h2>
+
+    <div class="activity-card">
+
+        <div class="activity-item">
+            <div class="activity-icon">✈️</div>
+
+            <div>
+                <h3>Flight Booked</h3>
+                <p>Chennai → Tokyo</p>
+            </div>
+
+            <span>2 hrs ago</span>
+        </div>
+
+        <div class="activity-item">
+            <div class="activity-icon">🏨</div>
+
+            <div>
+                <h3>Hotel Reserved</h3>
+                <p>Tokyo Grand Hotel</p>
+            </div>
+
+            <span>Yesterday</span>
+        </div>
+
+        <div class="activity-item">
+            <div class="activity-icon">❤️</div>
+
+            <div>
+                <h3>Wishlist Updated</h3>
+                <p>Added Switzerland</p>
+            </div>
+
+            <span>3 days ago</span>
+        </div>
+
+    </div>
+
+</section>
+<section class="weather">
+
+    <h2>🌤 Weather Today</h2>
+
+    <div class="weather-card">
+
+        <div class="weather-left">
+
+            <h1>28°C</h1>
+
+            <h3>Tokyo, Japan</h3>
+
+            <p>Sunny</p>
+
+        </div>
+
+       <div class="weather-right">
+    <i class="fa-solid fa-sun"></i>
+</div>
+    </div>
+
+</section>
+<section class="quick-actions">
+
+    <h2>⚡ Quick Actions</h2>
+
+    <div class="action-grid">
+        
+<button class="action-btn" onclick="window.location.href='planner.html'">
+    <i class="fa-solid fa-plane-departure"></i>
+    Plan Trip
+</button>
+
+<button class="action-btn" onclick="window.location.href='wishlist.html'">
+    <i class="fa-solid fa-heart"></i>
+    Wishlist
+</button>
+
+<button class="action-btn" onclick="window.location.href='expenses.html'">
+    <i class="fa-solid fa-wallet"></i>
+    Expenses
+</button>
+
+<button class="action-btn" onclick="window.location.href='profile.html'">
+    <i class="fa-solid fa-user"></i>
+    Profile
+</button>
+
+
+        
+    
+    </div>
+
+</section>
+
+    </main>
+
+</div>
+<script src="../js/script.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>
+
+

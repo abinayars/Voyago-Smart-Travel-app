@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Planner - Voyago</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="planner-page">
+
+    <div class="planner-header">
+
+        <div>
+            <h1>🌍 Smart Trip Planner</h1>
+            <p>Plan every moment of your journey.</p>
+        </div>
+
+        <button class="new-trip-btn" id="openTripModal">
+            + New Trip
+        </button>
+
+    </div>
+
+    <!-- Trip Overview -->
+
+    <div class="trip-overview">
+
+        <div class="overview-card">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <h3>Destination</h3>
+            <p id="overviewDestination">-</p>
+        
+        </div>
+
+        <div class="overview-card">
+            <i class="fa-solid fa-calendar-days"></i>
+            <h3>Travel Dates</h3>
+            <p id="overviewDates">-</p>
+        </div>
+
+        <div class="overview-card">
+            <i class="fa-solid fa-wallet"></i>
+            <h3>Budget</h3>
+            <p id="overviewBudget">₹0</p>
+        </div>
+
+        <div class="overview-card">
+            <i class="fa-solid fa-circle-check"></i>
+            <h3>Status</h3>
+            <p id="overviewStatus">Planning</p>
+        </div>
+
+    </div>
+
+    <!-- Itinerary -->
+
+    <section class="itinerary-section">
+
+        <h2>📅 Trip Itinerary</h2>
+
+        <div id="itineraryContainer">
+
+        </div>
+
+        <button class="new-trip-btn" id="addDayBtn">
+            + Add New Day
+        </button>
+
+    </section>
+
+    <!-- Notes -->
+
+    <section class="notes-section">
+
+        <h2>📝 Travel Notes</h2>
+
+        <textarea
+            id="tripNotes"
+            placeholder="Write important notes..."></textarea>
+
+    </section>
+
+    <!-- Buttons -->
+
+    <div F="planner-buttons">
+
+        <button
+    id="savePlannerBtn"
+    class="save-trip-btn">
+    Save Planner
+</button>
+
+    <button
+    id="downloadPdfBtn"
+    class="download-trip-btn">
+    Download PDF
+</button> 
+
+    </div>
+
+</div>
+
+
+<!-- ===========================
+     NEW TRIP MODAL
+============================ -->
+
+<div class="modal" id="tripModal">
+
+    <div class="modal-content">
+
+        <span class="close-modal" id="closeTripModal">&times;</span>
+
+        <h2>Create New Trip</h2>
+
+        <form id="tripForm">
+            <div class="form-group">
+    <label>Trip Name</label>
+    <input
+        type="text"
+        id="tripName"
+        placeholder="Enter trip name"
+        required>
+</div>
+
+<div class="form-group">
+    <label>Destination</label>
+    <input
+        type="text"
+        id="tripDestination"
+        placeholder="Enter destination"
+        required>
+</div>
+
+<div class="form-group">
+    <label>Start Date</label>
+    <input
+        type="date"
+        id="tripStartDate"
+        required>
+</div>
+
+<div class="form-group">
+    <label>End Date</label>
+    <input
+        type="date"
+        id="tripEndDate"
+        required>
+</div>
+        <div class="form-group">
+    <label>Travelers</label>
+    <input type="number" id="tripTravelers" required>
+</div>
+
+<div class="form-group">
+    <label>Budget</label>
+    <input type="number" id="tripBudget" required>
+</div>
+
+<div class="form-group">
+    <label>Status</label>
+
+    <select id="tripStatus">
+
+        <option value="Planning">Planning</option>
+
+        <option value="Upcoming">Upcoming</option>
+
+        <option value="Completed">Completed</option>
+
+    </select>
+
+</div>
+
+<button type="submit" class="create-trip-btn">
+    Create Trip
+</button>
+
+</form>
+
+</div>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="../js/script.js"></script>
+<script src="../js/planner.js"></script>
+
+</body>
+
+</html>
+            

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Voyago | Register</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body class="login-page">
+
+<div class="login-container">
+
+    <div class="login-card">
+
+        <h1>Create Your Account ✨</h1>
+
+        <p>Join Voyago and start planning your dream journeys.</p>
+
+        <form class="login-form" id="registerForm">
+
+            <div class="input-box">
+                <span class="input-icon">👤</span>
+                <input
+             type="text"
+             id="fullname"
+             placeholder="Full Name"
+             required>
+            </div>
+
+            <div class="input-box">
+                <span class="input-icon">📧</span>
+                 <input
+type="email"
+id="email"
+placeholder="Email Address"
+required>
+            </div>
+
+            <div class="input-box">
+                <span class="input-icon">🔒</span>
+                <input type="password" id="regPassword" placeholder="Password" required>
+                <span class="toggle-password" onclick="toggleRegisterPassword()">👁</span>
+            </div>
+
+            <div class="input-box">
+                <span class="input-icon">🔐</span>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+
+        <button
+        type="submit"
+    class="register-btn">
+
+Create Account
+
+</button>
+
+        </form>
+
+        <div class="divider">
+            <span>OR</span>
+        </div>
+
+        <button class="google-btn">
+            Continue with Google
+        </button>
+
+        <button class="github-btn">
+            Continue with GitHub
+        </button>
+
+        <p class="register-text">
+            Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+
+    </div>
+
+</div>
+
+<script src="../js/script.js"></script>
+<script src="../js/register.js"></script>
+
+
+</body>
+</html>
