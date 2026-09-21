@@ -329,34 +329,29 @@ http://localhost:5000
 Open the `frontend` folder using **VS Code** and launch the application using **Live Server** or another local development server.
 
 ---
-
 ## 📸 Application Preview
 
-Screenshots of the completed application will be added here.
+Screenshots of the completed application will be added here after the final UI redesign.
 
 ### Dashboard
-
-![Voyago Dashboard](screenshots/dashboard.png)
+The Voyago dashboard provides an overview of trips, budgets, upcoming travel plans, destinations, and recent activity.
 
 ### Trip Management
-
-![Voyago Trips](screenshots/trips.png)
+Users can create, search, update, and manage their travel plans.
 
 ### Smart Trip Planner
-
-![Voyago Planner](screenshots/planner.png)
+Users can create day-wise itineraries, add activities and notes, and export their travel plan as a PDF.
 
 ### Expense Management
-
-![Voyago Expenses](screenshots/expenses.png)
+Users can record, update, and manage their travel expenses.
 
 ### Wishlist
+Users can save and manage destinations they would like to visit.
 
-![Voyago Wishlist](screenshots/wishlist.png)
+### Authentication
+Voyago provides user registration, login, JWT authentication, and secure logout.
 
-### Login
 
-![Voyago Login](screenshots/login.png)
 
 ---
 
